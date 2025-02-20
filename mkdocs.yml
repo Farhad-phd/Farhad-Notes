@@ -1,0 +1,85 @@
+site_name: "PhD Notes: Optimization & Machine Learning"
+site_url: "https://yourwebsite.com"
+authors:
+  - name: "Farhad"
+    # email: "your.email@example.com"
+
+# repo_url: "https://github.com/yourusername/yourrepo"
+# repo_name: "yourusername/yourrepo"
+# edit_uri: "edit/main/docs/"
+
+theme:
+  name: "material"
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - content.tabs.link
+    - search.highlight
+    - search.share
+  palette:
+    - scheme: default
+      primary: orange
+      accent: black
+      toggle:
+        icon: material/weather-night
+        name: "Switch to dark mode"
+    - scheme: slate
+      primary: blue-grey
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: "Switch to light mode"
+  font:
+    text: "Lato"
+    code: "JetBrains Mono"
+
+nav:
+  - Home: index.md
+  - Optimization:
+      - Introduction: optimization/index.md
+      - Convex Optimization: optimization/convex.md
+      - Nonlinear Optimization: optimization/nonlinear.md
+      - Stochastic Optimization: optimization/stochastic.md
+  - Machine Learning:
+      - Introduction: machine-learning/index.md
+      - Supervised Learning: machine-learning/supervised.md
+      - Unsupervised Learning: machine-learning/unsupervised.md
+      - Deep Learning: machine-learning/deep-learning.md
+  - References: references.md
+  - About: about.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - footnotes
+  - tables
+  - pymdownx.highlight:
+      linenums: true
+      guess_lang: false
+      pygments_lang_class: true
+  - pymdownx.extra
+  - codehilite:
+      guess_lang: false
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+
+
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github
+#       link: "https://github.com/yourusername"
+#     - icon: fontawesome/brands/twitter
+#       link: "https://twitter.com/yourhandle"
+#   analytics:
+#     provider: google
+#     property: "UA-XXXXXXXXX-X"
+#   generator: false
+copyright: "© 2025. All rights reserved."
