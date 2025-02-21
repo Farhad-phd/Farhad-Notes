@@ -3,17 +3,17 @@
 # Introduction to Unconstrained Optimization
 
 In unconstrained optimization, we aim to find a point  
-```math
+\[
 x^* \in \mathbb{R}^n
-```
+\]
 that minimizes a continuously differentiable function
-```math
+\[
 \min_{x \in \mathbb{R}^n} f(x).
-```
-That is, we seek $x^*$ such that
-```math
+\]
+That is, we seek \(x^*\) such that
+\[
 f(x^*) \le f(x),\quad \forall\, x \in \mathbb{R}^n.
-```
+\]
 This framework underlies many algorithms in numerical optimization and forms the basis for further generalizations to constrained problems.
 
 ---
@@ -21,35 +21,35 @@ This framework underlies many algorithms in numerical optimization and forms the
 # 1. Problem Statement
 
 We consider the general unconstrained optimization problem:
-```math
+\[
 \min_{x \in \mathbb{R}^n} f(x),
-```
-where $f : \mathbb{R}^n \to \mathbb{R}$ is assumed to be continuously differentiable (and, in many cases, twice continuously differentiable).
+\]
+where \(f : \mathbb{R}^n \to \mathbb{R}\)is assumed to be continuously differentiable (and, in many cases, twice continuously differentiable).
 
 For example, a simple quadratic problem is
-```math
+\[
 f(x) = \frac{1}{2}x^T Q x - b^T x,
-```
-with $Q \in \mathbb{R}^{n \times n}$ symmetric and positive definite and $b \in \mathbb{R}^n$.
+\]
+with \(Q \in \mathbb{R}^{n \times n}\)symmetric and positive definite and \(b \in \mathbb{R}^n\).
 
 ---
 
 # 2. Taylor Expansion
 
-To analyze and approximate the behavior of $f$ near a given point $x_k$, we use the Taylor expansion. For a twice continuously differentiable function, the second-order Taylor expansion about $x_k$ is
-```math
+To analyze and approximate the behavior of \(f\)near a given point \(x_k\), we use the Taylor expansion. For a twice continuously differentiable function, the second-order Taylor expansion about \(x_k\)is
+\[
 f(x_k + p) \approx f(x_k) + \nabla f(x_k)^T p + \frac{1}{2} p^T \nabla^2 f(x_k) p,
-```
+\]
 where:
-- $\nabla f(x_k)$ is the gradient at $x_k$,
-- $\nabla^2 f(x_k)$ is the Hessian matrix at $x_k$,
-- $p$ is a perturbation (or search) direction.
+- \(\nabla f(x_k)\)is the gradient at \(x_k\),
+- \(\nabla^2 f(x_k)\)is the Hessian matrix at \(x_k\),
+- \(p\)is a perturbation (or search) direction.
 
 ## 2.1. Why Use Taylor Expansion?
 
 The Taylor expansion is used for several key reasons:
-- **Local Approximation:** It provides a quadratic model of $f$ near $x_k$ that is easier to minimize than the full nonlinear function.
-- **Derivation of Optimality Conditions:** The first-order term leads directly to the necessary condition for optimality: $\nabla f(x^*) = 0$.
+- **Local Approximation:** It provides a quadratic model of \(f\)near \(x_k\)that is easier to minimize than the full nonlinear function.
+- **Derivation of Optimality Conditions:** The first-order term leads directly to the necessary condition for optimality: \(\nabla f(x^*) = 0\).
 - **Algorithm Design:** Many iterative methods (such as Newton’s method and quasi-Newton methods) use the quadratic model to compute search directions.
 
 ---
@@ -60,32 +60,32 @@ Optimality conditions are necessary (and sometimes sufficient) for a point to be
 
 ## 3.1. First-Order Optimality Condition
 
-For a differentiable function $f$, if $x^*$ is a local minimizer, then
-```math
+For a differentiable function \(f\), if \(x^*\)is a local minimizer, then
+\[
 \nabla f(x^*) = 0.
-```
+\]
 This is a **first-order necessary condition**.
 
 ## 3.2. Second-Order Optimality Conditions
 
-If $f$ is twice continuously differentiable, then in addition to $\nabla f(x^*) = 0$, a local minimizer must satisfy:
-```math
+If \(f\)is twice continuously differentiable, then in addition to \(\nabla f(x^*) = 0\), a local minimizer must satisfy:
+\[
 \nabla^2 f(x^*) \succeq 0,
-```
-meaning that the Hessian is positive semidefinite at $x^*$. If $\nabla^2 f(x^*) \succ 0$ (positive definite), then $x^*$ is a strict local minimizer.
+\]
+meaning that the Hessian is positive semidefinite at \(x^*\). If \(\nabla^2 f(x^*) \succ 0\)(positive definite), then \(x^*\)is a strict local minimizer.
 
 ---
 
 # 4. Local vs. Global Optima
 
-- **Local Minimizer:** A point $x^*$ is a local minimizer if there exists a neighborhood $U$ such that
-  ```math
+- **Local Minimizer:** A point \(x^*\)is a local minimizer if there exists a neighborhood \(U\)such that
+  \[
   f(x^*) \le f(x), \quad \forall\, x \in U.
-  ```
-- **Global Minimizer:** A point $x^*$ is a global minimizer if
-  ```math
+  \]
+- **Global Minimizer:** A point \(x^*\)is a global minimizer if
+  \[
   f(x^*) \le f(x), \quad \forall\, x \in \mathbb{R}^n.
-  ```
+  \]
 
 For convex functions (see next section), every local minimizer is global. For nonconvex functions, however, multiple local minima may exist.
 
@@ -94,17 +94,17 @@ For convex functions (see next section), every local minimizer is global. For no
 # 5. Convex and Concave Functions
 
 - **Convex Function:**  
-  A function $f : \mathbb{R}^n \to \mathbb{R}$ is convex if for all $x, y \in \mathbb{R}^n$ and for all $\theta \in [0,1]$,
-  ```math
+  A function \(f : \mathbb{R}^n \to \mathbb{R}\)is convex if for all \(x, y \in \mathbb{R}^n\)and for all \(\theta \in [0,1]\),
+  \[
   f(\theta x + (1-\theta)y) \le \theta f(x) + (1-\theta)f(y).
-  ```
+  \]
   In convex optimization, any local minimizer is also a global minimizer.
 
 - **Concave Function:**  
-  A function is concave if $-f$ is convex. That is,
-  ```math
+  A function is concave if \(-f\)is convex. That is,
+  \[
   f(\theta x + (1-\theta)y) \ge \theta f(x) + (1-\theta)f(y).
-  ```
+  \]
 
 Convexity plays a central role in the design and analysis of optimization algorithms. For instance, many algorithms (gradient descent, Newton’s method) have stronger convergence guarantees when applied to convex problems.
 
@@ -117,17 +117,17 @@ Below are simple examples of solving a one-dimensional unconstrained optimizatio
 ### 6.1. Example Problem
 
 Consider the function
-```math
+\[
 f(x) = (x-5)^2,
-```
-which is convex with a unique global minimizer at $x^*=5$.
+\]
+which is convex with a unique global minimizer at \(x^*=5\).
 
 ---
 
 ### 6.2. Example
 
 === "julia"
-```julia 
+\]julia 
 # Define the objective function and its gradient
 f(x) = (x - 5)^2
 grad_f(x) = 2*(x - 5)
@@ -156,10 +156,10 @@ x1 = x0 + α*p
 println("Julia: x0 = ", x0)
 println("Julia: Step size α = ", α)
 println("Julia: New iterate x1 = ", x1)
-```
+\]
 
 === "python"
-```python
+\]python
 import numpy as np
 
 def f(x):
@@ -188,7 +188,7 @@ x1 = x0 + α * p
 print("Python: x0 =", x0)
 print("Python: Step size α =", α)
 print("Python: New iterate x1 =", x1)
-```
+\]
 
 # 7. Additional Topics and Further Reading
 
