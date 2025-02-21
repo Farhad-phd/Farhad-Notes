@@ -40,7 +40,7 @@ nav:
   - Home: index.md
   - Optimization:
       - Introduction: optimization/index.md
-  - implementation:
+  # - implementation:
       # - Convex Optimization: optimization/convex.md
       # - Convex Optimization: optimization/convex.md
       # - Nonlinear Optimization: optimization/nonlinear.md
