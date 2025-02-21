@@ -56,6 +56,22 @@ nav:
 
 
 markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - footnotes
+  - tables
+  - pymdownx.extra
+  - codehilite:
+      guess_lang: false
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
   - admonition
   - pymdownx.highlight
   - pymdownx.inlinehilite
@@ -74,6 +90,10 @@ markdown_extensions:
       guess_lang: false
   - pymdownx.inlinehilite
   - pymdownx.superfences
+  
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
+
 
 
 # extra:
