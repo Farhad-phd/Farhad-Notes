@@ -1,17 +1,17 @@
-# Welcome to MkDocs
+# Welcome to My PhD Notes
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Overview
+This website serves as a collection of notes, resources, and references for my PhD research in **Optimization and Machine Learning**.
 
-## Commands
+## Table of Contents
+- [Optimization](optimization/index.md)
+<!-- - [Machine Learning](machine-learning/index.md)
+- [References](references.md)
+- [About](about.md) -->
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Getting Started
+Explore the topics in **Optimization** and **Machine Learning** to gain insights into key concepts, algorithms, and applications.
 
-## Project layout
+<!-- This site is powered by **MkDocs Material** and is continuously updated. -->
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+🚀 *Happy Learning!*

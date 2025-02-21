@@ -40,16 +40,20 @@ nav:
   - Home: index.md
   - Optimization:
       - Introduction: optimization/index.md
-      - Convex Optimization: optimization/convex.md
-      - Nonlinear Optimization: optimization/nonlinear.md
-      - Stochastic Optimization: optimization/stochastic.md
-  - Machine Learning:
-      - Introduction: machine-learning/index.md
-      - Supervised Learning: machine-learning/supervised.md
-      - Unsupervised Learning: machine-learning/unsupervised.md
-      - Deep Learning: machine-learning/deep-learning.md
-  - References: references.md
-  - About: about.md
+  - implementation:
+      # - Convex Optimization: optimization/convex.md
+      # - Convex Optimization: optimization/convex.md
+      # - Nonlinear Optimization: optimization/nonlinear.md
+      # - Stochastic Optimization: optimization/stochastic.md
+  # - Machine Learning:
+  #     # - Introduction: machine-learning/index.md
+  #     # - Supervised Learning: machine-learning/supervised.md
+  #     # - Unsupervised Learning: machine-learning/unsupervised.md
+  #     # - Deep Learning: machine-learning/deep-learning.md
+  # - References: references.md
+  #   # - papers: references/papers.md
+  # - About: about.md
+
 
 markdown_extensions:
   - admonition
