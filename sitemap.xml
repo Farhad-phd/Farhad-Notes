@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://yourwebsite.com/</loc>
+         <lastmod>2025-06-19</lastmod>
+    </url>
+    <url>
+         <loc>https://yourwebsite.com/Papers/MINRES/Newton-MR%20_Yang_Liu_Fred_Roosta/</loc>
+         <lastmod>2025-06-19</lastmod>
+    </url>
+    <url>
+         <loc>https://yourwebsite.com/optimization/Rate_Convergance_vs_complexity/</loc>
+         <lastmod>2025-06-19</lastmod>
+    </url>
+    <url>
+         <loc>https://yourwebsite.com/optimization/set_of_iteration/</loc>
+         <lastmod>2025-06-19</lastmod>
+    </url>
+    <url>
+         <loc>https://yourwebsite.com/optimization/unconstrained/Intro/</loc>
+         <lastmod>2025-06-19</lastmod>
+    </url>
+    <url>
+         <loc>https://yourwebsite.com/optimization/unconstrained/line_vs_trust/</loc>
+         <lastmod>2025-06-19</lastmod>
+    </url>
+    <url>
+         <loc>https://yourwebsite.com/optimization/unconstrained/linesearch/</loc>
+         <lastmod>2025-06-19</lastmod>
+    </url>
+    <url>
+         <loc>https://yourwebsite.com/optimization/unconstrained/minres/</loc>
+         <lastmod>2025-06-19</lastmod>
+    </url>
+</urlset>
